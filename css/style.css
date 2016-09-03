@@ -13,7 +13,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
     display: block;
 }
 body {
@@ -59,12 +59,13 @@ body{
      color: #AA6900;
  }
 #baner{
-    background-image: url(../img/baner.png);
+    background: url(../img/baner.png) repeat-x;
     color:#e9e7da;
     font-size: 40px;
     width:100%;
     min-height:125px;
     line-height: 80px;
+
 
 }
 
@@ -77,9 +78,7 @@ body{
 h2{
     font-size:27px;
 }
-th, td {
-    padding: 5px;
-}
+/*navigacija, pomeranje na desnu stranu i postavljanje inline*/
 nav{
     float:right;
     color:#e9e7da;
@@ -95,4 +94,164 @@ nav ul li a{
 }
 nav ul li a:hover{
     color:#e9e7da;
+}
+/*Kraj navigacije*/
+
+
+#prijava{
+    color:#AA6900;
+}
+
+#panel{
+    position:relative;
+    left:0;
+    height:100%;
+    color:#e9e7da;
+    top:0;
+    background-color: #636b46;
+}
+#meni{
+
+    width:auto;
+    min-height: 1200px;
+    height: 100%;
+    font-size:18px;
+
+}
+
+#panel ul li:first-child{
+   border-bottom:none;
+    padding-bottom:5px;
+    color:#e9e7da;
+    font-size:20px;
+}
+#panel ul li{
+    padding:10px;
+    color:#e9e7da;
+    border-bottom:1px solid #373f27;
+}
+#panel ul li a{
+    text-decoration: none;
+    padding:10px;
+    color:#e9e7da;
+}
+
+#panel ul li:hover:first-child{
+    background-color:#636b46;
+}
+#panel ul li:hover{
+    background-color:#373f27;
+}
+
+/*forme*/
+
+#desni{
+    position: relative;
+    right:0;
+}
+/**/
+#log {
+    width: 95.5%;
+    background-color:#636b46;
+    color:#e9e7da;
+    position:absolute;
+    top:0;
+}
+
+#log tr td{
+    padding:10px;
+
+
+}
+#log tr{
+
+}
+#toggle_action{
+    visibility: hidden;
+}
+
+
+#toggle{
+    border:none;
+    background-color: transparent;
+    color:#AA6900;
+}
+.toggle:hover{
+    color:#e9e7da;
+}
+h3{
+    font-size:30px;
+}
+
+.lista{
+    list-style-type: none;
+}
+.lista a{
+
+    text-decoration: none;
+    color:#373f27;
+    font-size:17px;
+    font-weight: bold;
+}
+.lista a:hover{
+    color:#AA6900;
+}
+.black{
+    background-color:black;
+    line-height:10px;
+    height:10px;
+    position:absolute;
+    font-size:12px;
+    text-align: center;
+}
+#saradnik{
+    border:1px solid black;
+    width:100%;
+    height: auto;
+
+}
+.clearFix{
+    content:' ';
+    clear: both;
+    display:table;
+}
+#imgsaradnik{
+    float:left;
+    border:1px solid black;
+    width:200px;
+    height:200px;
+
+}
+.textsaradnik{
+    float:left;
+    padding:20px;
+    height:auto;
+    width:auto;
+    border:1px solid black;
+}
+
+#naslov{
+    font-size:25px;
+}
+
+#mail{
+    color:#373f27;
+    font-size:17px;
+}
+#bio{
+    width:100%;
+    height:auto;
+}
+#frmlab{
+    width:90%;
+    background-color:white;
+    color:#373f27;
+    position: relative;
+    top:20px;
+    border:1px solid #373f27;
+
+
+}
+#frmlab tr td {
+    padding: 10px;
 }

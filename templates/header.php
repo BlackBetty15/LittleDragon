@@ -1,10 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="sr">
 <head>
     <meta charset="UTF-8">
-    <link  rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/grid.css">
+    <link  rel="stylesheet" type="text/css" href="./css/style.css"> <!-- Putanja se gleda u odnosu na fajl u kom je pozvan-->
+    <link rel="stylesheet" type="text/css" href="./css/grid.css">
     <title><?php echo $page_title ?></title>  <!--Ispisivanje naslova stranice-->
+    <script type="text/javascript" src="js/script.js"></script>
+
+
 </head>
 <body>
 
@@ -19,7 +23,9 @@
         <nav>   <!-- Navigacija-->
             <ul>
                 <li><?php echo $status ?></li> <!-- Status da li je korisnik ulogovan ili ne-->
-                <li><?php echo $name ?></li> <!-- Ako je ulogovan, prikazuje ime, ako nije, pokazuje opciju za prijavljivanje-->
+                <li id="prijava">
+                    <?php echo $name ?>
+                </li> <!-- Ako je ulogovan, prikazuje ime, ako nije, pokazuje opciju za prijavljivanje-->
             </ul>
 
         </nav>
@@ -27,6 +33,8 @@
 
 </div>
 <!--Ne zatvara se body tag jer će biti zatvoren u nekom od php fajlova ili footer tamplate-u -->
+
+
 
 
 
