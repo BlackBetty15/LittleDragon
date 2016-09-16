@@ -1,62 +1,116 @@
-/**
- * Created by milic on 24.8.2016..
- */
+
 
 
 
 /*prikaz forme za logovanje*/
 function prikazi(){
-    document.getElementById('toggle_action').style.visibility='visible';
+    objekat=document.getElementById('toggle_action');
+    objekat.style.visibility='visible';
+
+
 }
 
 function sakrij(){
-    document.getElementById('toggle_action').reset(); /* Čisti input polja*/
-    document.getElementById('toggle_action').style.visibility='hidden';
+
+    var objekat=document.getElementById('toggle_action');
+    objekat.reset(); /* Čisti input polja*/
+    objekat.style.visibility='hidden';
+
+
 }
+/*Validacija forme*/
 /*
 function validateForm(){
 
-    //var user= document.forms['login']['usr'].value;
-    //var pass= document.forms['login']['psd'].value;
+    var userPolje=document.getElementById('username');
+    var passPolje=document.getElementById('password');
 
-    var user = document.getElementById("username").value;
-    var pass = document.getElementById("password").value;
+    var korisnik=document.getElementById('username').value;
+    var lozinka=document.getElementById('password').value;
 
-    if((user==" ")&&( pass==" ")){
 
-        alert("Morate popuniti polja");
-        //document.getElementById("toggle_action").style.visibility="visible";
-        document.getElementById('username').style.border='#561D25';
-        document.getElementById('password').style.border='#561D25';
-        user.focus();
+    if(korisnik==""&&lozinka==""){
+
+        alert('Morate prvo popuniti polja');
+        userPolje.style.border='1px solid red';
+        userPolje.style.background='#F4B7A5';
+        passPolje.style.border='1px solid red';
+        passPolje.style.background='#F4B7A5';
+
+        return false;
+    }
+
+    else if(korisnik==""){
+        alert('Niste uneli korisničko ime');
+        userPolje.style.border='1px solid red';
+        userPolje.style.background='#F4B7A5';
+
+        return false;
+    }
+
+    else if(lozinka==""){
+
+        alert('Niste uneli lozinku');
+        passPolje.style.border='1px solid red';
+        passPolje.style.background='#F4B7A5';
+
         return false;
 
     }
-    else if(user==" "){
-        alert("Morate uneti korisničko ime");
-        document.getElementById('username').style.border='#561D25';
-        user.focus();
-        return false;
+    else{
 
+        return true;
     }
-    else if (pass==" "){
-        alert("Morate uneti lozinku");
-        document.getElementById('password').style.border='#561D25';
-        pass.focus();
-        return false;
-
-
-    }
-    else return true;
 
 }
 
-function proba(){
-    alert("proba");
-    var status =  validateForm();
-    if(status == false)
-        alert("Prazna polja");
-    else
-        alert(document.getElementById("username").value);
-}*/
+*/
+function check(){
 
+    var korisnicko=document.getElementById('username').value;
+    var lozinka=document.getElementById('password').value;
+
+    alert(korisnicko+" "+lozinka);
+
+    var userPolje=document.getElementById('username');
+    var passPolje=document.getElementById('password');
+
+    var praznaPolja="Morate popuniti sva polja";
+    var neispravno="Uneli ste neispravne podatke";
+
+    if(korisnicko==""||lozinka==""){
+        document.getElementById('errorlog').innerHTML=praznaPolja;
+        userPolje.focus();
+        userPolje.style.border='1px solid red';
+        userPolje.style.background='#F4B7A5';
+        passPolje.style.border='1px solid red';
+        passPolje.style.background='#F4B7A5';
+
+        return false;
+    }
+
+    else{
+        $.post(
+
+            "ajax/obrada.php",
+            {idZahtev:3,usr:korisnicko,pas:lozinka},
+            function(odgovor,status){
+                alert(odgovor+status);
+                var provera=odgovor;
+
+                if(provera==-1){
+
+                   alert(neispravno);
+                    return false;
+                }
+
+                else if(provera==1){
+                    return true;
+                }
+            return false;
+            }
+
+
+        );
+    }
+}

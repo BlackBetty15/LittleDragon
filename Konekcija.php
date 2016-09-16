@@ -29,7 +29,8 @@ class Konekcija
         OR /*@ ne prikazuje ništa u browser-u*/
         die('Konekcija sa bazom nije uspela' . mysqli_connect_error());/*U slučaju greške prilikom konekcije*/
 
-        mysqli_set_charset($this->con, 'utf8_unicode_ci');
+        mysqli_set_charset($this->con, 'utf8');
+
 
     }
 

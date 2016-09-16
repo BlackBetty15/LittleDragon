@@ -94,6 +94,19 @@ class Saradnik{
             else echo $error;
 
         }
+    public static function sviSaradnici(){
+
+        $qry="SELECT username,pass FROM korisnici";
+        $result=Konekcija::upit($qry);
+        $nizSvih=[];
+
+
+            while($red = $result->fetch_assoc())
+            {
+                array_push($nizSvih,$red);
+            }
+        return $nizSvih;
+    }
 
 
 }

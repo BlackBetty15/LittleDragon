@@ -13,6 +13,8 @@ echo "<div class=\"col-6\">";
 echo "<h3>".$page_title."</h3><br><br>";
 
 Predmet::listajPredmet();
+
+
 echo "<hr>";
 
 if(isset($_SESSION['tip'])&&($_SESSION['tip']==1)){

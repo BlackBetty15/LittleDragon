@@ -117,6 +117,7 @@ nav ul li a:hover{
     height: 100%;
     font-size:18px;
 
+
 }
 
 #panel ul li:first-child{
@@ -242,7 +243,7 @@ h3{
     width:100%;
     height:auto;
 }
-#frmlab{
+.frmlab{
     width:90%;
     background-color:white;
     color:#373f27;
@@ -252,6 +253,11 @@ h3{
 
 
 }
-#frmlab tr td {
+.frmlab tr td {
     padding: 10px;
+}
+#errorlog{
+    color: #590A12;
+    font-size:16px;
+    font-weight: bolder;
 }

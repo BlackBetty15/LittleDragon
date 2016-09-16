@@ -25,8 +25,10 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `angazovan`
 --
+CREATE DATABASE  labvezbe
+    DEFAULT CHARACTER SET utf8;
 
-CREATE TABLE `angazovan` (
+CREATE TABLE labvezbe.`angazovan` (
   `idvezbe` int(11) NOT NULL,
   `idkorisnik` int(11) NOT NULL,
   `aktivan` int(11) NOT NULL DEFAULT '1'
@@ -38,7 +40,7 @@ CREATE TABLE `angazovan` (
 -- Table structure for table `korisnici`
 --
 
-CREATE TABLE `korisnici` (
+CREATE TABLE labvezbe.`korisnici` (
   `id` int(11) NOT NULL,
   `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `pass` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
@@ -56,7 +58,7 @@ CREATE TABLE `korisnici` (
 -- Dumping data for table `korisnici`
 --
 
-INSERT INTO `korisnici` (`id`, `username`, `pass`, `tip`, `ime`, `prezime`, `aktivan`, `mail`, `bio`, `zvanje`, `slika`) VALUES
+INSERT INTO labvezbe.`korisnici` (`id`, `username`, `pass`, `tip`, `ime`, `prezime`, `aktivan`, `mail`, `bio`, `zvanje`, `slika`) VALUES
 (1, 'admin', 'admin', 1, 'Milica', 'Ninković', 1, 'milican@viser.edu.rs', '', '', NULL),
 (3, 'bbosko', 'bosko123', 2, 'Boško', 'Bogojević', 1, 'bbogojevic@viser.edu.rs', '', 'dipl. inž', ''),
 (5, 'bkrneta', 'krneta123', 2, 'Borislav', 'Krneta', 1, 'borak@viser.edu.rs', '', 'dipl. inž', ''),
@@ -73,7 +75,7 @@ INSERT INTO `korisnici` (`id`, `username`, `pass`, `tip`, `ime`, `prezime`, `akt
 -- Table structure for table `predaje`
 --
 
-CREATE TABLE `predaje` (
+CREATE TABLE labvezbe.`predaje` (
   `idpredmet` int(11) NOT NULL,
   `idsaradnik` int(11) NOT NULL,
   `aktivan` int(11) NOT NULL DEFAULT '1'
@@ -83,7 +85,7 @@ CREATE TABLE `predaje` (
 -- Dumping data for table `predaje`
 --
 
-INSERT INTO `predaje` (`idpredmet`, `idsaradnik`, `aktivan`) VALUES
+INSERT INTO labvezbe.`predaje` (`idpredmet`, `idsaradnik`, `aktivan`) VALUES
 (1, 3, 1),
 (1, 7, 1),
 (5, 5, 1),
@@ -100,7 +102,7 @@ INSERT INTO `predaje` (`idpredmet`, `idsaradnik`, `aktivan`) VALUES
 -- Table structure for table `predmeti`
 --
 
-CREATE TABLE `predmeti` (
+CREATE TABLE labvezbe.`predmeti` (
   `id` int(11) NOT NULL,
   `naziv` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `opis` text COLLATE utf8_unicode_ci,
@@ -111,7 +113,7 @@ CREATE TABLE `predmeti` (
 -- Dumping data for table `predmeti`
 --
 
-INSERT INTO `predmeti` (`id`, `naziv`, `opis`, `lab`) VALUES
+INSERT INTO labvezbe.`predmeti` (`id`, `naziv`, `opis`, `lab`) VALUES
 (1, 'Programiranje veb aplikacija', '', 403),
 (2, 'Objektno programiranje 1', '', 208),
 (3, 'Programski jezici', '', 310),
@@ -130,7 +132,7 @@ INSERT INTO `predmeti` (`id`, `naziv`, `opis`, `lab`) VALUES
 -- Table structure for table `vezba`
 --
 
-CREATE TABLE `vezba` (
+CREATE TABLE labvezbe.`vezba` (
   `id` int(11) NOT NULL,
   `naziv` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `idpredmet` int(11) NOT NULL,
@@ -146,13 +148,13 @@ CREATE TABLE `vezba` (
 --
 -- Indexes for table `angazovan`
 --
-ALTER TABLE `angazovan`
+ALTER TABLE labvezbe.`angazovan`
   ADD PRIMARY KEY (`idvezbe`,`idkorisnik`);
 
 --
 -- Indexes for table `korisnici`
 --
-ALTER TABLE `korisnici`
+ALTER TABLE labvezbe.`korisnici`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username_UNIQUE` (`username`),
   ADD UNIQUE KEY `mail_UNIQUE` (`mail`),
@@ -161,20 +163,20 @@ ALTER TABLE `korisnici`
 --
 -- Indexes for table `predaje`
 --
-ALTER TABLE `predaje`
+ALTER TABLE labvezbe.`predaje`
   ADD PRIMARY KEY (`idpredmet`,`idsaradnik`);
 
 --
 -- Indexes for table `predmeti`
 --
-ALTER TABLE `predmeti`
+ALTER TABLE labvezbe.`predmeti`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `naziv_UNIQUE` (`naziv`);
 
 --
 -- Indexes for table `vezba`
 --
-ALTER TABLE `vezba`
+ALTER TABLE labvezbe.`vezba`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `naziv_UNIQUE` (`naziv`);
 
@@ -185,17 +187,17 @@ ALTER TABLE `vezba`
 --
 -- AUTO_INCREMENT for table `korisnici`
 --
-ALTER TABLE `korisnici`
+ALTER TABLE labvezbe.`korisnici`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `predmeti`
 --
-ALTER TABLE `predmeti`
+ALTER TABLE labvezbe.`predmeti`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `vezba`
 --
-ALTER TABLE `vezba`
+ALTER TABLE labvezbe.`vezba`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

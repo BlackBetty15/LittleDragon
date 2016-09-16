@@ -35,10 +35,4 @@ if (!empty($_POST['usr'])&& !empty($_POST['psd'])){
 
 
 }
-
-
-
-
-
-
 ?>

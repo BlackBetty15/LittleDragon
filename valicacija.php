@@ -11,6 +11,7 @@ if(!isset($_SESSION['tip'])){
     $name="<button id=\"toggle\" onclick=\"prikazi()\">(prijavi se)</button>";
 
 
+
 }
 
 else if(($_SESSION['tip']!= null)&&($_SESSION['aktivan']==0)){

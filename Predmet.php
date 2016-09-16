@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: milic
- * Date: 30.8.2016.
- * Time: 15.31
- */
+
 include_once 'Konekcija.php';
 include_once 'Saradnik.php';
 
@@ -16,7 +11,7 @@ class Predmet
     public static function listajPredmet(){
 
 
-        $qry="SELECT id, naziv FROM predmeti where 1";
+        $qry="SELECT id, naziv  FROM predmeti where 1";
         $result=Konekcija::upit($qry);
         $error="Trenutno ne postoji nijedan predmet, pogledajte kasnije";
 
@@ -63,7 +58,7 @@ public static function nadjiIme(){
             $row=$result->fetch_assoc();
 
             echo'<h3>'.$row['naziv'].'</h3><br><br>';
-            echo'Opis:<br>'.$row['opis'].'Vežbe ovog predmeta se održavaju u labaratoriji '.$row['lab'];
+            echo'Opis:<br>'.$row['opis'].'Vežbe ovog predmeta se održavaju u laboratoriji '.$row['lab'];
             echo '<hr>';
             echo '<br><h4>Vežbe</h4><br>';
 
@@ -77,32 +72,25 @@ public static function nadjiIme(){
     public static function dodajPredmet($name,$about,$lab){
 
         $qry="INSERT INTO predmeti(naziv,opis,lab) VALUES('".$name."','".$about."',".$lab.")";
-        Konekcija::upit($qry);
-        return true;
-
-    }
-    public static function proveriIme($name){
-
-        $qry="SELECT naziv FROM predmeti where ime='".$name."'";
-
-        $r=Konekcija::upit($qry);
-        $v=Konekcija::prazna($r);
-        if($v==1)
-            return 'Predmet već postoji!';
-        else return true;
+       $status = Konekcija::upit($qry);
+        return $status;
 
     }
 
-    public static function proveriLab($lab){
 
-        $qry="SELECT lab FROM predmeti WHERE lab=".$lab;
-        $r=Konekcija::upit($qry);
-        $v=Konekcija::prazna($r);
-        if($v==1)
-            return 'Labaratorija je zauzeta';
-        else return true;
+    public static function vratiSve()
+    {
+        $nizSvih = [];
+
+        $rs = Konekcija::upit("SELECT naziv, lab FROM predmeti");
+
+        while($red = $rs->fetch_assoc())
+        {
+            array_push($nizSvih,$red);
+        }
+
+        return $nizSvih;
     }
-
 
     /*Dodati ostale funkcije, kao što su  obrišiPredmet, izmeniPredmet... */
 }

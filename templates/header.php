@@ -1,8 +1,9 @@
 
 <!DOCTYPE html>
-<html lang="sr">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <link  rel="stylesheet" type="text/css" href="./css/style.css"> <!-- Putanja se gleda u odnosu na fajl u kom je pozvan-->
     <link rel="stylesheet" type="text/css" href="./css/grid.css">
     <title><?php echo $page_title ?></title>  <!--Ispisivanje naslova stranice-->
