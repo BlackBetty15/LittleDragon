@@ -16,7 +16,7 @@ if( isset($_GET['idZahtev']) && $_GET['idZahtev'] == 1)
     $naziv = $_GET['naziv'];
     $lab = intval($_GET['lab']);
     $opis=$_GET['opis'];
-    $status;
+    
 
         if($naziv==""||$lab==""){
 
