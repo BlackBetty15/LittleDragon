@@ -59,9 +59,12 @@ class Saradnik{
 
            echo '</div>';
 
-            echo '<div id="bio">';
+            echo '<div id="biografijaS">';
 
                     echo '<br><br><p>Biografija:<br>'.$row['bio'].'</p>';
+                        if(isset($_SESSION['tip'])){
+
+                        }
 
             echo '</div><hr><br><h4>Predmeti na kojima je saradnik aktivan:</h4><br>';
             self::aktivanNa($id);
@@ -73,7 +76,7 @@ class Saradnik{
 
     }
 
-        public function aktivanNa($id){
+        public static function aktivanNa($id){
 
             $error='Saradnik nije angažovan ni na jednom predmetu';
             $qry="SELECT id, naziv FROM predmeti WHERE id IN (
@@ -96,7 +99,7 @@ class Saradnik{
         }
     public static function sviSaradnici(){
 
-        $qry="SELECT username,pass FROM korisnici";
+        $qry="SELECT username,pass,mail FROM korisnici";
         $result=Konekcija::upit($qry);
         $nizSvih=[];
 
@@ -108,5 +111,64 @@ class Saradnik{
         return $nizSvih;
     }
 
+public static function dodajSaradnika($username,$pass,$ime,$prezime,$mail,$bio,$zvanje){
 
+    $tip=2;
+    $aktivan=1;
+
+    $qry="INSERT INTO korisnici(username,pass,tip,ime,prezime,aktivan,mail,bio,zvanje)
+    VALUES ('".$username."','".$pass."',$tip,'".$ime."','".$prezime."',$aktivan,'".$mail."','".$bio."','".$zvanje."')";
+
+    $status=Konekcija::upit($qry);
+    return $status;
+}
+
+
+    public static function dodajBiografiju($nova,$id){
+
+        $qry="UPDATE korisnici SET bio='".$nova."' WHERE id=".$id;
+
+        $status=Konekcija::upit($qry);
+
+        return $status;
+
+    }
+
+    public static function getBio($id){
+
+        $qry="SELECT bio FROM korisnici WHERE id=".$id;
+        $status=Konekcija::upit($qry);
+
+        $status->fetch_assoc();
+
+        return $status;
+    }
+
+    public static function mojPredmet($idP,$idS){
+
+        $qry="SELECT * FROM predaje WHERE idpredmet=".$idP." AND idsaradnik=".$idS;
+
+
+        $result=Konekcija::upit($qry);
+
+
+        if($result){
+
+            $v=Konekcija::prazna($result);
+            if($v==1){
+                return 1;
+            }
+            else return 0;
+        }
+
+
+    }
+
+    public static function promeniLozinku($pass,$id){
+
+        $qry="UPDATE korisnici SET pass='".$pass."' WHERE id=".$id;
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
 }

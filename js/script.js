@@ -18,53 +18,14 @@ function sakrij(){
 
 
 }
+
+/*Toggle za formu*/
+
+
+
+
 /*Validacija forme*/
-/*
-function validateForm(){
 
-    var userPolje=document.getElementById('username');
-    var passPolje=document.getElementById('password');
-
-    var korisnik=document.getElementById('username').value;
-    var lozinka=document.getElementById('password').value;
-
-
-    if(korisnik==""&&lozinka==""){
-
-        alert('Morate prvo popuniti polja');
-        userPolje.style.border='1px solid red';
-        userPolje.style.background='#F4B7A5';
-        passPolje.style.border='1px solid red';
-        passPolje.style.background='#F4B7A5';
-
-        return false;
-    }
-
-    else if(korisnik==""){
-        alert('Niste uneli korisničko ime');
-        userPolje.style.border='1px solid red';
-        userPolje.style.background='#F4B7A5';
-
-        return false;
-    }
-
-    else if(lozinka==""){
-
-        alert('Niste uneli lozinku');
-        passPolje.style.border='1px solid red';
-        passPolje.style.background='#F4B7A5';
-
-        return false;
-
-    }
-    else{
-
-        return true;
-    }
-
-}
-
-*/
 function check(){
 
     var korisnicko=document.getElementById('username').value;
@@ -113,4 +74,34 @@ function check(){
 
         );
     }
-}
+
+};
+    /*Brisanje sadržaja polja na "otkaži"*/
+$("body").on("click","#saradnikBrisi",function(){
+
+    $(".obavezno").css('border','1px solid #A9A9A9');
+    $("#errormsg").html("");
+
+
+});
+
+$("body").on("click","#predmetBrisi",function(){
+
+    $(".obavezno").css('border','1px solid #A9A9A9');
+    $("#poruka").html("");
+    $("#porukalab").html("");
+
+});
+/*Toogle za forme*/
+$("body").on("click","#frmtoggle",function(){
+        $('#tglaction').toggle(2000);
+
+        $(".obavezno").css('border','1px solid #A9A9A9');
+        $("#errormsg").html("");
+
+        $("#poruka").html("");
+        $("#porukalab").html("");
+        $(".poruka").html("");
+        $(".lozinka").val('');
+
+});

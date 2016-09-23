@@ -7,8 +7,8 @@
                     <label for="ime">Ime*</label>
                 </td>
                 <td>
-                    <input type="text" id="ime" name="ime"  >
-                    <p id="poruka"></p>
+                    <input type="text" id="ime" name="ime" class="obavezno" autofocus >
+
                 </td>
             </tr>
             <tr>
@@ -16,7 +16,7 @@
                     <label for="prezime">Prezime*</label>
                 </td>
                 <td>
-                    <input type="text"  id="prezime" name="prezime">
+                    <input type="text"  id="prezime" name="prezime" class="obavezno">
                 </td>
 
             </tr>
@@ -40,27 +40,35 @@
             <tr>
                 <td>
                     <label for="mejl">E-mail*</label>
+                    <input type="checkbox" id="mailCheck"  disabled >
                 </td>
                 <td>
-                    <input type="email"  id="mejl" name="mejl">
+                    <input type="email"  id="mejl" name="mejl"  class="obavezno" class="cekirano" maxlength="45">
+                    <p id="errorMail" class="poruka"></p>
                 </td>
+
 
             </tr>
             <tr>
                 <td>
                     <label for="korisnickoi">Korisničko ime*</label>
+                    <input type="checkbox" id="checkUser" disabled>
                 </td>
                 <td>
-                    <input type="text"  id="korisnickoi" name="korisnicko">
+                    <input type="text"  id="korisnickoi" name="korisnicko" class="obavezno" class="cekirano"  maxlength="20">
+                    <p id="errorKorisnicko" class="poruka"></p>
                 </td>
+
 
             </tr>
             <tr>
                 <td>
                     <label for="lozinka">Lozinka*</label>
+
                 </td>
                 <td>
-                    <input type="password"  id="lozinka" name="lozinka">
+                    <input type="password"  id="lozinka" name="lozinka" class="obavezno"  maxlength="20">
+                    <p id="errorLozinka" class="poruka"></p>
                 </td>
 
             </tr>
@@ -74,16 +82,21 @@
 
             </tr>
 
+            <tr >
+                <td colspan="2">
+                    <p id="errormsg" class="poruka"></p>
+                </td>
+            </tr>
 
 
             <tr>
 
                 <td>
-                    <input type="reset" value="Obriši">
+                    <input type="reset" value="Obriši" id="saradnikBrisi">
                 </td>
                 <td>
 
-                    <input type="button" value="Dodaj saradnika">
+                    <input type="button" id="dodajSaradnika" value="Dodaj saradnika">
                 </td>
             </tr>
         </table>

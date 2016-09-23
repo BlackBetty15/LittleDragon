@@ -58,9 +58,8 @@ public static function nadjiIme(){
             $row=$result->fetch_assoc();
 
             echo'<h3>'.$row['naziv'].'</h3><br><br>';
-            echo'Opis:<br>'.$row['opis'].'Vežbe ovog predmeta se održavaju u laboratoriji '.$row['lab'];
-            echo '<hr>';
-            echo '<br><h4>Vežbe</h4><br>';
+            echo'<h4>Opis:</h4><br><p id="opisP">'.$row['opis'].'</p><br>Vežbe ovog predmeta se održavaju u laboratoriji '.$row['lab'];
+
 
 
         }
@@ -92,5 +91,11 @@ public static function nadjiIme(){
         return $nizSvih;
     }
 
-    /*Dodati ostale funkcije, kao što su  obrišiPredmet, izmeniPredmet... */
+    public static function izmeniOpis($opis,$idP){
+
+        $qry="UPDATE predmeti SET opis='".$opis."' WHERE id=".$idP;
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
 }

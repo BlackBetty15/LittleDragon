@@ -11,9 +11,9 @@ include_once 'templates/left.php';
 echo "<div class=\"col-6\">";
 
 echo "<h3>".$page_title."</h3><br><br>";
-
+echo '<div id="listaP">';
 Predmet::listajPredmet();
-
+echo '</div>';
 
 echo "<hr>";
 

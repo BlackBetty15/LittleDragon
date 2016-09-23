@@ -25,6 +25,6 @@ else if(($_SESSION['tip']!= null)&&($_SESSION['aktivan']==0)){
 
 }
 else {
-    $status = "<a href=\"stranasaradnik.php?id=".$_SESSION['id']."\">".$_SESSION['ime']." ".$_SESSION['prezime']."</a>";
+    $status = "<a href=\"stranasaradnik.php?id=".$_SESSION['idKorisnik']."\">".$_SESSION['ime']." ".$_SESSION['prezime']."</a>";
     $name = "<a id=\"odjava\" href='logout.php'>(odjavi se)</a>";
 }

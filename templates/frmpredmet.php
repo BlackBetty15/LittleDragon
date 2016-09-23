@@ -7,8 +7,8 @@
                     <label for="subjectname">Ime predmeta*</label>
                 </td>
                 <td>
-                    <input type="text" id="subjectname" name="sbn"   >
-                    <p id="poruka"></p>
+                    <input type="text" id="subjectname" name="sbn" class="obavezno"  >
+                    <p id="poruka" class="poruka"></p>
                 </td>
             </tr>
             <tr>
@@ -25,8 +25,8 @@
                 <label for="labbr">Laboratorija *</label>
                 </td>
                 <td>
-                    <input type="text" id="labbr" name="lab" >
-                    <p id="porukalab"></p>
+                    <input type="text" id="labbr" name="lab" class="obavezno" >
+                    <p id="porukalab" class="poruka"></p>
                 </td>
 
 
@@ -35,7 +35,7 @@
             <tr>
 
                 <td>
-                    <input type="reset" value="Obriši">
+                    <input type="reset" value="Obriši" id="predmetBrisi">
                 </td>
                 <td>
 

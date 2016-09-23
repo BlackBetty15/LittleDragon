@@ -13,7 +13,7 @@ if (!empty($_POST['usr'])&& !empty($_POST['psd'])){
 
     if (is_array($vrednost)){
 
-        $_SESSION['id']=$vrednost['id'];
+        $_SESSION['idKorisnik']=$vrednost['id'];
         $_SESSION['tip']=$vrednost['tip'];
         $_SESSION['korisnik']=$vrednost['username'];
         $_SESSION['lozinka']=$vrednost['pass'];
