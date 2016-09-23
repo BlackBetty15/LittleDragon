@@ -1,10 +1,8 @@
-Baza:
--povezano
--napraviti klase za upite i poreðati ih po kategorijama
+To do:
 
-Funkcije:
--Napraviti funkciju kalendar
--realizovati nedelje preko upita
-
-Ostalo:
--Pokušati da ne oduzeti sebi život i pojesti živce
+-Upload 
+-Funkcije za vežbe (dodaj, briši, izmeni...)
+-Dodavanje slike
+-Brisanje predmeta
+-Brisanje/deaktivacija saradnika
+-Dodati na predmet/vežbu
