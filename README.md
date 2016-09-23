@@ -6,3 +6,4 @@ To do:
 -Brisanje predmeta
 -Brisanje/deaktivacija saradnika
 -Dodati na predmet/vežbu
+-Nova verzija baze, dodaj u projekat
