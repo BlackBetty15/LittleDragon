@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcad1894-54c1-4fe2-8823-1ed21929b0c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/provere.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frmizmene.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frmopis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Predmet.php" afterPath="$PROJECT_DIR$/Predmet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Saradnik.php" afterPath="$PROJECT_DIR$/Saradnik.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/dodaj.php" afterPath="$PROJECT_DIR$/ajax/dodaj.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/obrada.php" afterPath="$PROJECT_DIR$/ajax/obrada.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/obrada.js" afterPath="$PROJECT_DIR$/js/obrada.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/moji.php" afterPath="$PROJECT_DIR$/moji.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/predmeti.php" afterPath="$PROJECT_DIR$/predmeti.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saradnici.php" afterPath="$PROJECT_DIR$/saradnici.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stranapredmeta.php" afterPath="$PROJECT_DIR$/stranapredmeta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stranasaradnik.php" afterPath="$PROJECT_DIR$/stranasaradnik.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/footer.php" afterPath="$PROJECT_DIR$/templates/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/frmpredmet.php" afterPath="$PROJECT_DIR$/templates/frmpredmet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/frmsaradnik.php" afterPath="$PROJECT_DIR$/templates/frmsaradnik.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.php" afterPath="$PROJECT_DIR$/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/left.php" afterPath="$PROJECT_DIR$/templates/left.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valicacija.php" afterPath="$PROJECT_DIR$/valicacija.php" />
-    </list>
+    <list default="true" id="bcad1894-54c1-4fe2-8823-1ed21929b0c9" name="Default" comment="" />
     <ignored path="pvaproject.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -270,7 +245,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
