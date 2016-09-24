@@ -66,9 +66,7 @@ class Saradnik{
 
                         }
 
-            echo '</div><hr><br><h4>Predmeti na kojima je saradnik aktivan:</h4><br>';
-            self::aktivanNa($id);
-            echo '<hr>';
+
 
         }
         else
@@ -146,7 +144,7 @@ public static function dodajSaradnika($username,$pass,$ime,$prezime,$mail,$bio,$
 
     public static function mojPredmet($idP,$idS){
 
-        $qry="SELECT * FROM predaje WHERE idpredmet=".$idP." AND idsaradnik=".$idS;
+        $qry="SELECT * FROM predaje WHERE idpredmet=".$idP." AND idsaradnik=".$idS." AND aktivan=1";
 
 
         $result=Konekcija::upit($qry);

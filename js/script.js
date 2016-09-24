@@ -105,3 +105,83 @@ $("body").on("click","#frmtoggle",function(){
         $(".lozinka").val('');
 
 });
+        //Dodavanje na predmet//
+
+$("body").on("click","#dodajNaPredmet",function(){
+
+    poruka=$("#porukaDodaj");
+    predmet=$("#imePr").val();
+    alert(predmet);
+    postoji="Saradnik je već na predmetu";
+    dodat="Saradnik je uspešno dodat na predmet";
+    aktiviran="Saradnik je ponovo aktivan na predmetu";
+    unknown="Došlo je do neke greške, pokušajte kasnije";
+
+    $.post(
+        "ajax/obrada.php?idZahtev=7",
+        {naziv:predmet},
+        function(odgovor,status){
+
+            alert(odgovor+status);
+
+            if(odgovor==0){
+                poruka.css('color','red');
+                poruka.html(postoji);
+            }
+            else if(odgovor==2){
+                poruka.css('color','green');
+                poruka.html(aktiviran);
+                $("#listica").load(document.URL+' #listica');
+                $("#ukloniP").load(document.URL+ ' #ukloniP');
+            }
+            else if(odgovor==3){
+                poruka.css('color','red');
+                poruka.html(unknown);
+            }
+            else if(odgovor==1){
+                poruka.css('color','green');
+                poruka.html(dodat);
+                $("#listica").load(document.URL+' #listica');
+                $("#ukloniP").load(document.URL+ ' #ukloniP');
+            }
+
+
+        });
+
+
+});
+
+            //Uklanjanje sa predmeta//
+
+$("body").on("click","#ukloni",function(){
+
+    ukloni=$("#imePrUkl").val();
+    poruka=$("#porukaUkloni");
+
+            //ispisi//
+
+    unknown="Došlo je do neke greške, pokušajte kasnije";
+    uspesno="Saradnik uspešno uklonjen";
+
+    $.post(
+       "ajax/obrada.php?idZahtev=8",
+        {predmet:ukloni},
+        function(odgovor,status){
+            alert(odgovor+status);
+
+            if(odgovor==1){
+                poruka.css('color','green');
+
+                $("#listica").load(document.URL+ ' #listica');
+                $("#ukloniP").load(document.URL+ ' #ukloniP');
+
+                poruka.html(uspesno);
+            }
+            if(odgovor==0){
+                poruka.css('color','red');
+                poruka.html(unknown);
+            }
+
+        });
+
+});

@@ -98,4 +98,75 @@ public static function nadjiIme(){
         return $status;
 
     }
+    public static function listaDodavanje(){
+
+        $qry="SELECT id,naziv FROM predmeti WHERE 1";
+
+        $result=Konekcija::upit($qry);
+
+        while($row=$result->fetch_assoc()){
+
+            echo'<option>'.$row['naziv'].'</option>';
+
+        }
+        return;
+    }
+
+    public static function dodajNaPredmet($idS,$idP){
+
+        $qry="INSERT INTO predaje (idpredmet,idsaradnik,aktivan) VALUES($idP,$idS,1)";
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
+    public static function isActive($idS,$idP){
+
+        $qry="SELECT aktivan FROM predaje WHERE idpredmet=$idP AND idsaradnik=$idS";
+        $result=Konekcija::upit($qry);
+
+
+        if($result){
+
+            $v=Konekcija::prazna($result);
+            if($v==1){
+                $row=$result->fetch_assoc();
+                $aktivan=$row['aktivan'];
+
+            }
+            else $aktivan=3;
+        }
+        return $aktivan;
+    }
+
+    public static function nadjiId($naziv){
+
+        $qry='SELECT id FROM predmeti WHERE naziv="'.$naziv.'"';
+        $result=Konekcija::upit($qry);
+        $row=$result->fetch_assoc();
+        $id=$row['id'];
+        return $id ;
+
+    }
+    public static function aktiviraj($idS,$idp){
+        $qry="UPDATE predaje SET aktivan=1 WHERE idpredmet=$idp AND idsaradnik=$idS";
+        $status=Konekcija::upit($qry);
+        return $status;
+    }
+
+    public static function listaUklanjanje($idS){
+
+        $qry="SELECT naziv FROM predmeti WHERE id IN (SELECT idpredmet FROM predaje WHERE idsaradnik=$idS AND aktivan=1)";
+        $result=Konekcija::upit($qry);
+        while($row=$result->fetch_assoc()){
+            echo'<option >'.$row['naziv'].'</option>';
+        }
+        return;
+    }
+    public static function ukloni($idS,$idP){
+
+        $qry="UPDATE predaje SET aktivan=0 WHERE idpredmet=$idP AND idsaradnik=$idS";
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
 }

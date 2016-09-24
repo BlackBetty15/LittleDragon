@@ -158,5 +158,49 @@ if(isset($_GET['idZahtev'])&&($_GET['idZahtev']==6)){
 
 
 }
+//Dodavanje na predmet//
+if(isset($_GET['idZahtev'])&&($_GET['idZahtev']==7)){
+
+    $ime=$_POST['naziv'];
+    $idP=Predmet::nadjiId($ime);
+    $idS=$_SESSION['korisnikPromena'];
+
+
+    $aktivan=Predmet::isActive($idS,$idP);
+
+if($aktivan==3){
+
+    if(Predmet::dodajNaPredmet($idS,$idP)){
+        echo 1;
+    }
+}
+    else if($aktivan==1){
+        echo 0;
+    }
+    else if($aktivan==0){
+            if(Predmet::aktiviraj($idS,$idP)){
+                echo 2;
+            }
+        else
+            echo 3;
+    }
+
+
+
+}
+            //Uklanjanje predmeta//
+
+if(isset($_GET['idZahtev'])&&($_GET['idZahtev']==8)){
+
+    $idS=$_SESSION['korisnikPromena'];
+    $naziv=$_POST['predmet'];
+    $idP=Predmet::nadjiId($naziv);
+
+        if(Predmet::ukloni($idS,$idP)){
+            echo 1;
+        }
+    else
+        echo 0;
+}
 
 ?>

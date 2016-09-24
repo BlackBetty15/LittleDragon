@@ -12,3 +12,12 @@ if(Saradnik::dodajSaradnika("petar",'petar123','petar','petrovic','petar@viser.e
 }
 else
     echo Konekcija::pokazivacKon()->getKonekcija()->error;*/
+
+$naziv="Operativni sistemi1";
+if(Predmet::nadjiId($naziv)){
+
+    echo "uspelo!";
+}
+else{
+    echo "Greška";
+}
