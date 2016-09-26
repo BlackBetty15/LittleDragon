@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcad1894-54c1-4fe2-8823-1ed21929b0c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frmslika.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Predmet.php" afterPath="$PROJECT_DIR$/Predmet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Saradnik.php" afterPath="$PROJECT_DIR$/Saradnik.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/dodaj.php" afterPath="$PROJECT_DIR$/ajax/dodaj.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stranapredmeta.php" afterPath="$PROJECT_DIR$/stranapredmeta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stranasaradnik.php" afterPath="$PROJECT_DIR$/stranasaradnik.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/frmizmene.php" afterPath="$PROJECT_DIR$/templates/frmizmene.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/frmsaradnik.php" afterPath="$PROJECT_DIR$/templates/frmsaradnik.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
-    </list>
+    <list default="true" id="bcad1894-54c1-4fe2-8823-1ed21929b0c9" name="Default" comment="" />
     <ignored path="pvaproject.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
