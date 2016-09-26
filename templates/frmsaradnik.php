@@ -43,7 +43,7 @@
                     <input type="checkbox" id="mailCheck"  disabled >
                 </td>
                 <td>
-                    <input type="email"  id="mejl" name="mejl"  class="obavezno" class="cekirano" maxlength="45">
+                    <input type="email"  id="mejl" name="mejl"  class="obavezno" class="cekirano" maxlength="45" placeholder="example@viser.edu.rs">
                     <p id="errorMail" class="poruka"></p>
                 </td>
 

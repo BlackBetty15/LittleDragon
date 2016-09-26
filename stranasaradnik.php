@@ -83,7 +83,8 @@ if(isset($_SESSION['tip'])&&($_SESSION['tip']==1||$_SESSION['idKorisnik']==$_GET
     echo '<button id="frmtoggle">Izmeni profil</button>';
 
         include_once 'templates/frmizmene.php';
-
+    echo '<br><br>';
+        include_once 'templates/frmslika.php';
 }
 
 echo '</div>';

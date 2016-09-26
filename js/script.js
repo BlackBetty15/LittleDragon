@@ -185,3 +185,4 @@ $("body").on("click","#ukloni",function(){
         });
 
 });
+        //Promena slike saradnika//

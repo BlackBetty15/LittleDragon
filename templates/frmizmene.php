@@ -1,6 +1,6 @@
 
-<form  action="" method="post"  id="tglaction" name="dodaj" style="display: none
-">
+<form  action="ajax/dodaj.php" method="post"   id="tglaction" name="dodaj" style="display: none
+" enctype="multipart/form-data">
     <table class="frmlab">
 
         <tr>
@@ -34,24 +34,6 @@
             </td>
 
         </tr>
-
-        <tr>
-
-            <td>
-                <label for="slikaNova">Nova slika</label>
-            </td>
-
-            <td>
-
-            </td>
-
-            <td>
-                <input type="button" id="izmeniS" value="Promeni Sliku">
-            </td>
-        </tr>
-
-
-
 
     </table>
 

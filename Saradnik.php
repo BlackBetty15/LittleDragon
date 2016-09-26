@@ -51,8 +51,11 @@ class Saradnik{
            $row=$result->fetch_assoc();
 
            echo '<div id="saradnik" class="clearFix">';
-
+                    if($row['slika']==NULL || $row['slika']==""){
             echo '<img src="img/user.png" id="imgsaradnik">';
+                    }
+            else
+            echo'<img src="'.$row['slika'].'"'.'id="imgsaradnik">';
             echo'<h3 id="naslov" class="textsaradnik">'.$row['zvanje'].' '.$row['ime'].' '.$row['prezime'].'</h3>';
             echo '<p id="mail" class="textsaradnik">Saradnika možete kontaktirati na mejl:<br><a href="mailto:" '.$row['mail'].'>'.
             $row['mail'].'</a></p>';
@@ -169,4 +172,28 @@ public static function dodajSaradnika($username,$pass,$ime,$prezime,$mail,$bio,$
         return $status;
 
     }
+
+    public static function dodajSliku($idS,$src){
+
+        $qry="UPDATE korisnici SET slika='".$src."' WHERE id=".$idS;
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
+
+    public static function obrisiKorisnika($idS){
+
+        $qry1="DELETE * FROM angazovan WHERE idkorisnik=$idS";
+        $qry2="DELETE * FROM predaje WHERE idkorisnik=$idS";
+        $qry3="DELETE * FROM korisnik WHERE id=$idS";
+
+        $status1=Konekcija::upit($qry1);
+        $status2=Konekcija::upit($qry2);
+        $status3=Konekcija::upit($qry3);
+
+        $final=($status1&&$status2&&$status3);
+
+        return $final;
+    }
+
 }

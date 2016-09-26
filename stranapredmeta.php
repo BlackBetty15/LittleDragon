@@ -25,11 +25,16 @@ if(isset($_SESSION['tip'])){
     if(($_SESSION['tip']==1)||$korisnikov==1){
         echo '<input type="button" value="Izmena opisa" id="frmtoggle">';
         include_once 'templates/frmopis.php';
-        echo '<hr>';
+        echo '<br><hr>';
     }
 }
 echo '<h3>Vežbe:</h3><br>';
+if(isset($_SESSION['tip'])){
+    if($_SESSION['tip']!=0||(Saradnik::mojPredmet($idP,$idS))==1){
 
+    include_once 'templates/frmvezba.php';
+    }
+}
 
 
 echo "</div>";
