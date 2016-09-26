@@ -185,4 +185,47 @@ $("body").on("click","#ukloni",function(){
         });
 
 });
-        //Promena slike saradnika//
+        //Brisanje predmeta//
+$("body").on("click","#deletetoggle",function(){
+
+    $('#brisanje').toggle(1000);
+
+});
+
+$("body").on("click","#neBrisi",function(){
+
+    $('#brisanje').css('display','none');
+});
+
+$("body").on("click","#obrisi",function(){
+
+    $.get(
+        "ajax/obrada.php?idZahtev=9",
+        function(odgovor,status){
+            alert(odgovor + " "+ status);
+            window.location.href='index.php';
+        }
+    );
+    return false;
+});
+
+$("body").on("click","#dodajS",function(){
+
+    function _(el)
+    {
+        return document.getElementById(el);
+    }
+
+
+        var fileN = _("file").files[0];
+        // alert(file.name+" | "+file.size+" | "+file.type);
+        var formdata = new FormData();
+        formdata.append("file", fileN);
+        var ajax = new XMLHttpRequest();
+
+        ajax.open("POST", "ajax/dodaj.php?idZahtev=1");
+         ajax.send(formdata);
+
+        alert(ajax.responseText);
+
+});

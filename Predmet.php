@@ -176,9 +176,9 @@ public static function nadjiIme(){
 
     public static function obrisiPredmet($idP){
 
-        $qry1="DELETE * FROM vezba WHERE idpredmet=$idP";
-        $qry2="DELETE * FROM predaje WHERE idpredmet=$idP";
-        $qry3="DELETE * FROM predmeti WHERE id=$idP";
+        $qry1="DELETE  FROM vezba WHERE idpredmet=$idP";
+        $qry2="DELETE  FROM predaje WHERE idpredmet=$idP";
+        $qry3="DELETE  FROM predmeti WHERE id=$idP";
 
         $status1=Konekcija::upit($qry1);
         $status2=Konekcija::upit($qry2);
@@ -192,8 +192,8 @@ public static function nadjiIme(){
 
     public static function obrisiVezbu($idV){
 
-        $qry1="DELETE * FROM angazovan WHERE idvezbe=$idV";
-        $qry2="DELETE * FROM vezba WHERE id=$idV";
+        $qry1="DELETE  FROM angazovan WHERE idvezbe=$idV";
+        $qry2="DELETE  FROM vezba WHERE id=$idV";
 
 
         $status1=Konekcija::upit($qry1);

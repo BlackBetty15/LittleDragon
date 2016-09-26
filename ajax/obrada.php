@@ -202,5 +202,14 @@ if(isset($_GET['idZahtev'])&&($_GET['idZahtev']==8)){
     else
         echo 0;
 }
+if(isset($_GET['idZahtev'])&&($_GET['idZahtev']==9)){
+
+    $idP=intval($_SESSION['predmetPromena']);
+
+    if(Predmet::obrisiPredmet($idP)){
+
+        echo 1;
+    }
+}
 
 ?>

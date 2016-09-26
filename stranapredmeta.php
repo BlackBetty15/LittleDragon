@@ -27,6 +27,11 @@ if(isset($_SESSION['tip'])){
         include_once 'templates/frmopis.php';
         echo '<br><hr>';
     }
+    if($_SESSION['tip']==1){
+
+        echo '<input type="button" value="Obriši predmet" id="deletetoggle">';
+        include_once 'templates/frmbrisanje.php';
+    }
 }
 echo '<h3>Vežbe:</h3><br>';
 if(isset($_SESSION['tip'])){

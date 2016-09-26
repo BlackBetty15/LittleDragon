@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcad1894-54c1-4fe2-8823-1ed21929b0c9" name="Default" comment="" />
+    <list default="true" id="bcad1894-54c1-4fe2-8823-1ed21929b0c9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frmbrisanje.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/images/WIN_20141211_232619.JPG" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Predmet.php" afterPath="$PROJECT_DIR$/Predmet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Saradnik.php" afterPath="$PROJECT_DIR$/Saradnik.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/dodaj.php" afterPath="$PROJECT_DIR$/ajax/dodaj.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/obrada.php" afterPath="$PROJECT_DIR$/ajax/obrada.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stranapredmeta.php" afterPath="$PROJECT_DIR$/stranapredmeta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/frmslika.php" afterPath="$PROJECT_DIR$/templates/frmslika.php" />
+    </list>
     <ignored path="pvaproject.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -29,104 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Saradnik.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Saradnik.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.576923">
-              <caret line="195" column="22" selection-start-line="185" selection-start-column="8" selection-end-line="195" selection-end-column="22" />
-              <folding>
-                <marker date="1474918236959" expanded="true" signature="221:271" placeholder="SELECT id, i... korisnici" />
-                <marker date="1474918236959" expanded="true" signature="918:951" placeholder="SELECT * FRO... korisnici" />
-                <marker date="1474918236959" expanded="true" signature="2190:2332" placeholder="SELECT id, n... predmeti" />
-                <marker date="1474918236959" expanded="true" signature="2263:2331" placeholder="SELECT idpre... predaje" />
-                <marker date="1474918236959" expanded="true" signature="2781:2821" placeholder="SELECT usern... korisnici" />
-                <marker date="1474918236959" expanded="true" signature="3167:3361" placeholder="INSERT INTO korisnici... " />
-                <marker date="1474918236959" expanded="true" signature="3494:3540" placeholder="UPDATE koris... " />
-                <marker date="1474918236959" expanded="true" signature="3675:3710" placeholder="SELECT bio F... korisnici" />
-                <marker date="1474918236959" expanded="true" signature="3886:3970" placeholder="SELECT * FRO... predaje" />
-                <marker date="1474918236959" expanded="true" signature="3886:3971" placeholder="SELECT * FRO... predaje" />
-                <marker date="1474918236959" expanded="true" signature="4259:4306" placeholder="UPDATE koris... " />
-                <marker date="1474918236959" expanded="true" signature="4449:4469" placeholder="UPDATE koris... " />
-                <marker date="1474918236959" expanded="true" signature="4449:4477" placeholder="UPDATE koris... " />
-                <marker date="1474918236959" expanded="true" signature="4449:4486" placeholder="UPDATE koris... " />
-                <marker date="1474918236959" expanded="true" signature="4449:4496" placeholder="UPDATE koris... " />
-                <marker date="1474918236959" expanded="true" signature="4449:4541" placeholder="UPDATE koris... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Predmet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Predmet.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.269231">
-              <caret line="202" column="34" selection-start-line="202" selection-start-column="34" selection-end-line="202" selection-end-column="34" />
-              <folding>
-                <marker date="1474918643105" expanded="true" signature="146:185" placeholder="SELECT id, n... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="838:874" placeholder="SELECT naziv... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="1097:1129" placeholder="SELECT * FRO... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="1698:1776" placeholder="INSERT INTO predmeti... " />
-                <marker date="1474918643105" expanded="true" signature="1951:1982" placeholder="SELECT naziv... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="2186:2232" placeholder="UPDATE predm... " />
-                <marker date="1474918643105" expanded="true" signature="2370:2407" placeholder="SELECT id,na... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="2653:2711" placeholder="INSERT INTO predaje... " />
-                <marker date="1474918643105" expanded="true" signature="2653:2716" placeholder="INSERT INTO predaje... " />
-                <marker date="1474918643105" expanded="true" signature="2653:2723" placeholder="INSERT INTO predaje... " />
-                <marker date="1474918643105" expanded="true" signature="2653:2724" placeholder="INSERT INTO predaje... " />
-                <marker date="1474918643105" expanded="true" signature="2859:2887" placeholder="SELECT * FRO... predaje" />
-                <marker date="1474918643105" expanded="true" signature="2859:2903" placeholder="SELECT * FRO... predaje" />
-                <marker date="1474918643105" expanded="true" signature="2859:2923" placeholder="SELECT * FRO... predaje" />
-                <marker date="1474918643105" expanded="true" signature="2878:2887" placeholder="INSERT INTO predaje... " />
-                <marker date="1474918643105" expanded="true" signature="3291:3328" placeholder="SELECT id FR... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="3291:3338" placeholder="SELECT id FR... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="3291:3339" placeholder="SELECT id FR... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="3533:3598" placeholder="UPDATE preda... " />
-                <marker date="1474918643105" expanded="true" signature="3740:3846" placeholder="SELECT naziv... predmeti" />
-                <marker date="1474918643105" expanded="true" signature="3780:3845" placeholder="SELECT idpre... predaje" />
-                <marker date="1474918643105" expanded="true" signature="4080:4145" placeholder="UPDATE preda... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stranasaradnik.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stranasaradnik.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
-              <folding>
-                <marker date="1474825153895" expanded="true" signature="657:1172" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="678:1151" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="700:818" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="700:987" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="818:887" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="1008:1130" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="1041:1108" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="1289:1458" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="1310:1458" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="1332:1458" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="1632:1755" placeholder="..." />
-                <marker date="1474825153895" expanded="true" signature="1665:1733" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="frmslika.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/frmslika.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -135,28 +53,18 @@
       <file leaf-file-name="stranapredmeta.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stranapredmeta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+            <state vertical-scroll-proportion="-8.076923">
+              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frmvezba.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/frmvezba.php">
+      <file leaf-file-name="dodaj.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ajax/dodaj.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6507937">
-              <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frmpredmet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/frmpredmet.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.35978836">
+              <caret line="12" column="64" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -165,8 +73,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.344828">
+              <caret line="228" column="31" selection-start-line="228" selection-start-column="31" selection-end-line="228" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -210,18 +118,19 @@
         <option value="$PROJECT_DIR$/templates/frmpredmet.php" />
         <option value="$PROJECT_DIR$/js/obrada.js" />
         <option value="$PROJECT_DIR$/templates/frmdodaj.php" />
-        <option value="$PROJECT_DIR$/ajax/obrada.php" />
         <option value="$PROJECT_DIR$/templates/frmsaradnik.php" />
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/templates/frmizmene.php" />
         <option value="$PROJECT_DIR$/stranasaradnik.php" />
-        <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/templates/frmvezba.php" />
+        <option value="$PROJECT_DIR$/templates/frmbrisanje.php" />
+        <option value="$PROJECT_DIR$/stranapredmeta.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/Predmet.php" />
+        <option value="$PROJECT_DIR$/Saradnik.php" />
+        <option value="$PROJECT_DIR$/ajax/obrada.php" />
         <option value="$PROJECT_DIR$/templates/frmslika.php" />
         <option value="$PROJECT_DIR$/ajax/dodaj.php" />
-        <option value="$PROJECT_DIR$/templates/frmvezba.php" />
-        <option value="$PROJECT_DIR$/stranapredmeta.php" />
-        <option value="$PROJECT_DIR$/Saradnik.php" />
-        <option value="$PROJECT_DIR$/Predmet.php" />
+        <option value="$PROJECT_DIR$/js/script.js" />
       </list>
     </option>
   </component>
@@ -280,20 +189,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pvaproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pvaproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pvaproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,7 +276,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22205438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22507553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -409,7 +304,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21903323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22507553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -437,27 +332,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stranasaradnik.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding>
-            <marker date="1474825153895" expanded="true" signature="657:1172" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="678:1151" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="700:818" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="700:987" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="818:887" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="1008:1130" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="1041:1108" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="1289:1458" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="1310:1458" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="1332:1458" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="1632:1755" placeholder="..." />
-            <marker date="1474825153895" expanded="true" signature="1665:1733" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -478,22 +352,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="158" column="25" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
           <folding>
-            <marker date="1474918236959" expanded="true" signature="221:271" placeholder="SELECT id, i... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="918:951" placeholder="SELECT * FRO... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="2190:2332" placeholder="SELECT id, n... predmeti" />
-            <marker date="1474918236959" expanded="true" signature="2263:2331" placeholder="SELECT idpre... predaje" />
-            <marker date="1474918236959" expanded="true" signature="2781:2821" placeholder="SELECT usern... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="3167:3361" placeholder="INSERT INTO korisnici... " />
-            <marker date="1474918236959" expanded="true" signature="3494:3540" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="3675:3710" placeholder="SELECT bio F... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="3886:3970" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918236959" expanded="true" signature="3886:3971" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918236959" expanded="true" signature="4259:4306" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4469" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4477" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4486" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4496" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4541" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="221:271" placeholder="SELECT id, i... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="918:951" placeholder="SELECT * FRO... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="2190:2332" placeholder="SELECT id, n... predmeti" />
+            <marker date="1474922679073" expanded="true" signature="2263:2331" placeholder="SELECT idpre... predaje" />
+            <marker date="1474922679073" expanded="true" signature="2781:2821" placeholder="SELECT usern... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="3167:3361" placeholder="INSERT INTO korisnici... " />
+            <marker date="1474922679073" expanded="true" signature="3494:3540" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="3675:3710" placeholder="SELECT bio F... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="3886:3970" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679073" expanded="true" signature="3886:3971" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679073" expanded="true" signature="4259:4306" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4469" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4477" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4486" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4496" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4541" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4641:4681" placeholder="DELETE FROM " />
+            <marker date="1474922679073" expanded="true" signature="4703:4741" placeholder="DELETE FROM " />
+            <marker date="1474922679073" expanded="true" signature="4763:4794" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -503,28 +380,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474918643105" expanded="true" signature="146:185" placeholder="SELECT id, n... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="838:874" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="1097:1129" placeholder="SELECT * FRO... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="1698:1776" placeholder="INSERT INTO predmeti... " />
-            <marker date="1474918643105" expanded="true" signature="1951:1982" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="2186:2232" placeholder="UPDATE predm... " />
-            <marker date="1474918643105" expanded="true" signature="2370:2407" placeholder="SELECT id,na... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="2653:2711" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2716" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2723" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2724" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2859:2887" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2859:2903" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2859:2923" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2878:2887" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="3291:3328" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3291:3338" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3291:3339" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3533:3598" placeholder="UPDATE preda... " />
-            <marker date="1474918643105" expanded="true" signature="3740:3846" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3780:3845" placeholder="SELECT idpre... predaje" />
-            <marker date="1474918643105" expanded="true" signature="4080:4145" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="146:185" placeholder="SELECT id, n... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="838:874" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="1097:1129" placeholder="SELECT * FRO... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="1698:1776" placeholder="INSERT INTO predmeti... " />
+            <marker date="1474922679067" expanded="true" signature="1951:1982" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="2186:2232" placeholder="UPDATE predm... " />
+            <marker date="1474922679067" expanded="true" signature="2370:2407" placeholder="SELECT id,na... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="2653:2711" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2716" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2723" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2724" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2859:2887" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2859:2903" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2859:2923" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2878:2887" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="3291:3328" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3291:3338" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3291:3339" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3533:3598" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="3740:3846" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3780:3845" placeholder="SELECT idpre... predaje" />
+            <marker date="1474922679067" expanded="true" signature="4080:4145" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="4388:4423" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4445:4482" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4504:4535" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4808:4845" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4867:4895" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -606,28 +488,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474918643105" expanded="true" signature="146:185" placeholder="SELECT id, n... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="838:874" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="1097:1129" placeholder="SELECT * FRO... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="1698:1776" placeholder="INSERT INTO predmeti... " />
-            <marker date="1474918643105" expanded="true" signature="1951:1982" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="2186:2232" placeholder="UPDATE predm... " />
-            <marker date="1474918643105" expanded="true" signature="2370:2407" placeholder="SELECT id,na... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="2653:2711" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2716" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2723" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2724" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2859:2887" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2859:2903" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2859:2923" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2878:2887" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="3291:3328" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3291:3338" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3291:3339" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3533:3598" placeholder="UPDATE preda... " />
-            <marker date="1474918643105" expanded="true" signature="3740:3846" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3780:3845" placeholder="SELECT idpre... predaje" />
-            <marker date="1474918643105" expanded="true" signature="4080:4145" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="146:185" placeholder="SELECT id, n... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="838:874" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="1097:1129" placeholder="SELECT * FRO... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="1698:1776" placeholder="INSERT INTO predmeti... " />
+            <marker date="1474922679067" expanded="true" signature="1951:1982" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="2186:2232" placeholder="UPDATE predm... " />
+            <marker date="1474922679067" expanded="true" signature="2370:2407" placeholder="SELECT id,na... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="2653:2711" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2716" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2723" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2724" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2859:2887" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2859:2903" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2859:2923" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2878:2887" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="3291:3328" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3291:3338" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3291:3339" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3533:3598" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="3740:3846" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3780:3845" placeholder="SELECT idpre... predaje" />
+            <marker date="1474922679067" expanded="true" signature="4080:4145" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="4388:4423" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4445:4482" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4504:4535" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4808:4845" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4867:4895" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -767,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Konekcija.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.038462">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/obrada.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66843975">
@@ -803,24 +682,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/templates/frmizmene.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-15.269231">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/obrada.php">
+    <entry file="file://$PROJECT_DIR$/templates/frmsaradnik.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.576923">
-          <caret line="196" column="33" selection-start-line="196" selection-start-column="33" selection-end-line="196" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.9858906">
+          <caret line="45" column="146" selection-start-line="45" selection-start-column="146" selection-end-line="45" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frmpredmet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029982364">
+          <caret line="10" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stranasaradnik.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-4.1538463">
           <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
           <folding>
             <marker date="1474825153895" expanded="true" signature="657:1172" placeholder="..." />
@@ -839,119 +725,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
+    <entry file="file://$PROJECT_DIR$/templates/frmvezba.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+        <state vertical-scroll-proportion="-25.23077">
+          <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/frmizmene.php">
+    <entry file="file://$PROJECT_DIR$/Konekcija.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.269231">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/dodaj.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/frmslika.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        <state vertical-scroll-proportion="-11.038462">
+          <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/frmsaradnik.php">
+    <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9858906">
-          <caret line="45" column="146" selection-start-line="45" selection-start-column="146" selection-end-line="45" selection-end-column="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/frmpredmet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stranapredmeta.php">
+    <entry file="file://$PROJECT_DIR$/Predmet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.692307">
+          <caret line="195" column="22" selection-start-line="195" selection-start-column="22" selection-end-line="195" selection-end-column="22" />
+          <folding>
+            <marker date="1474922679067" expanded="true" signature="146:185" placeholder="SELECT id, n... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="838:874" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="1097:1129" placeholder="SELECT * FRO... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="1698:1776" placeholder="INSERT INTO predmeti... " />
+            <marker date="1474922679067" expanded="true" signature="1951:1982" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="2186:2232" placeholder="UPDATE predm... " />
+            <marker date="1474922679067" expanded="true" signature="2370:2407" placeholder="SELECT id,na... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="2653:2711" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2716" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2723" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2653:2724" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="2859:2887" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2859:2903" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2859:2923" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679067" expanded="true" signature="2878:2887" placeholder="INSERT INTO predaje... " />
+            <marker date="1474922679067" expanded="true" signature="3291:3328" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3291:3338" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3291:3339" placeholder="SELECT id FR... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3533:3598" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="3740:3846" placeholder="SELECT naziv... predmeti" />
+            <marker date="1474922679067" expanded="true" signature="3780:3845" placeholder="SELECT idpre... predaje" />
+            <marker date="1474922679067" expanded="true" signature="4080:4145" placeholder="UPDATE preda... " />
+            <marker date="1474922679067" expanded="true" signature="4388:4423" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4445:4482" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4504:4535" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4808:4845" placeholder="DELETE FROM " />
+            <marker date="1474922679067" expanded="true" signature="4867:4895" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frmbrisanje.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Saradnik.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.576923">
-          <caret line="195" column="22" selection-start-line="185" selection-start-column="8" selection-end-line="195" selection-end-column="22" />
+        <state vertical-scroll-proportion="-8.076923">
+          <caret line="177" column="48" selection-start-line="177" selection-start-column="44" selection-end-line="177" selection-end-column="48" />
           <folding>
-            <marker date="1474918236959" expanded="true" signature="221:271" placeholder="SELECT id, i... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="918:951" placeholder="SELECT * FRO... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="2190:2332" placeholder="SELECT id, n... predmeti" />
-            <marker date="1474918236959" expanded="true" signature="2263:2331" placeholder="SELECT idpre... predaje" />
-            <marker date="1474918236959" expanded="true" signature="2781:2821" placeholder="SELECT usern... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="3167:3361" placeholder="INSERT INTO korisnici... " />
-            <marker date="1474918236959" expanded="true" signature="3494:3540" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="3675:3710" placeholder="SELECT bio F... korisnici" />
-            <marker date="1474918236959" expanded="true" signature="3886:3970" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918236959" expanded="true" signature="3886:3971" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918236959" expanded="true" signature="4259:4306" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4469" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4477" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4486" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4496" placeholder="UPDATE koris... " />
-            <marker date="1474918236959" expanded="true" signature="4449:4541" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="221:271" placeholder="SELECT id, i... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="918:951" placeholder="SELECT * FRO... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="2190:2332" placeholder="SELECT id, n... predmeti" />
+            <marker date="1474922679073" expanded="true" signature="2263:2331" placeholder="SELECT idpre... predaje" />
+            <marker date="1474922679073" expanded="true" signature="2781:2821" placeholder="SELECT usern... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="3167:3361" placeholder="INSERT INTO korisnici... " />
+            <marker date="1474922679073" expanded="true" signature="3494:3540" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="3675:3710" placeholder="SELECT bio F... korisnici" />
+            <marker date="1474922679073" expanded="true" signature="3886:3970" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679073" expanded="true" signature="3886:3971" placeholder="SELECT * FRO... predaje" />
+            <marker date="1474922679073" expanded="true" signature="4259:4306" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4469" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4477" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4486" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4496" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4449:4541" placeholder="UPDATE koris... " />
+            <marker date="1474922679073" expanded="true" signature="4641:4681" placeholder="DELETE FROM " />
+            <marker date="1474922679073" expanded="true" signature="4703:4741" placeholder="DELETE FROM " />
+            <marker date="1474922679073" expanded="true" signature="4763:4794" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Predmet.php">
+    <entry file="file://$PROJECT_DIR$/ajax/obrada.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.269231">
-          <caret line="202" column="34" selection-start-line="202" selection-start-column="34" selection-end-line="202" selection-end-column="34" />
-          <folding>
-            <marker date="1474918643105" expanded="true" signature="146:185" placeholder="SELECT id, n... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="838:874" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="1097:1129" placeholder="SELECT * FRO... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="1698:1776" placeholder="INSERT INTO predmeti... " />
-            <marker date="1474918643105" expanded="true" signature="1951:1982" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="2186:2232" placeholder="UPDATE predm... " />
-            <marker date="1474918643105" expanded="true" signature="2370:2407" placeholder="SELECT id,na... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="2653:2711" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2716" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2723" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2653:2724" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="2859:2887" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2859:2903" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2859:2923" placeholder="SELECT * FRO... predaje" />
-            <marker date="1474918643105" expanded="true" signature="2878:2887" placeholder="INSERT INTO predaje... " />
-            <marker date="1474918643105" expanded="true" signature="3291:3328" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3291:3338" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3291:3339" placeholder="SELECT id FR... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3533:3598" placeholder="UPDATE preda... " />
-            <marker date="1474918643105" expanded="true" signature="3740:3846" placeholder="SELECT naziv... predmeti" />
-            <marker date="1474918643105" expanded="true" signature="3780:3845" placeholder="SELECT idpre... predaje" />
-            <marker date="1474918643105" expanded="true" signature="4080:4145" placeholder="UPDATE preda... " />
-          </folding>
+        <state vertical-scroll-proportion="1.0158731">
+          <caret line="210" column="15" selection-start-line="210" selection-start-column="15" selection-end-line="210" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/frmvezba.php">
+    <entry file="file://$PROJECT_DIR$/stranapredmeta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6507937">
-          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+        <state vertical-scroll-proportion="-8.076923">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frmslika.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.344828">
+          <caret line="228" column="31" selection-start-line="228" selection-start-column="31" selection-end-line="228" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/dodaj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35978836">
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="64" />
           <folding />
         </state>
       </provider>

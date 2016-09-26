@@ -183,9 +183,9 @@ public static function dodajSaradnika($username,$pass,$ime,$prezime,$mail,$bio,$
 
     public static function obrisiKorisnika($idS){
 
-        $qry1="DELETE * FROM angazovan WHERE idkorisnik=$idS";
-        $qry2="DELETE * FROM predaje WHERE idkorisnik=$idS";
-        $qry3="DELETE * FROM korisnik WHERE id=$idS";
+        $qry1="DELETE  FROM angazovan WHERE idkorisnik=$idS";
+        $qry2="DELETE  FROM predaje WHERE idkorisnik=$idS";
+        $qry3="DELETE  FROM korisnik WHERE id=$idS";
 
         $status1=Konekcija::upit($qry1);
         $status2=Konekcija::upit($qry2);
