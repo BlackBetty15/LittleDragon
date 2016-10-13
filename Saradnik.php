@@ -12,7 +12,7 @@ class Saradnik{
 
     public static function listajSaradnike(){
 
-    $qry="SELECT id, ime, prezime FROM korisnici where tip=2";
+    $qry="SELECT id, ime, prezime FROM korisnici where tip=2 && aktivan=1";
     $result=Konekcija::upit($qry);
     $error="Trenutno ne postoji nijedan saradnik, pogledajte kasnije";
 
@@ -183,9 +183,9 @@ public static function dodajSaradnika($username,$pass,$ime,$prezime,$mail,$bio,$
 
     public static function obrisiKorisnika($idS){
 
-        $qry1="DELETE  FROM angazovan WHERE idkorisnik=$idS";
-        $qry2="DELETE  FROM predaje WHERE idkorisnik=$idS";
-        $qry3="DELETE  FROM korisnik WHERE id=$idS";
+        $qry1="DELETE  FROM angazovan WHERE idsaradnik=".$idS;
+        $qry2="DELETE  FROM predaje WHERE idsaradnik=".$idS;
+        $qry3="DELETE  FROM korisnici WHERE id=".$idS;
 
         $status1=Konekcija::upit($qry1);
         $status2=Konekcija::upit($qry2);
@@ -195,5 +195,139 @@ public static function dodajSaradnika($username,$pass,$ime,$prezime,$mail,$bio,$
 
         return $final;
     }
+
+    public static function deaktivirajKorisnika($idS){
+
+        $qry1="UPDATE angazovan SET aktivan=0 WHERE idsaradnik=$idS";
+        $qry2="UPDATE predaje SET aktivan=0 WHERE idsaradnik=$idS";
+        $qry3="UPDATE  korisnici SET aktivan=0 WHERE id=$idS";
+
+        $status1=Konekcija::upit($qry1);
+        $status2=Konekcija::upit($qry2);
+        $status3=Konekcija::upit($qry3);
+
+        $final=($status1&&$status2&&$status3);
+
+        return $final;
+    }
+
+    public static function deaktivirani(){
+
+        $qry='SELECT id,ime,prezime FROM korisnici WHERE aktivan=0';
+        $result=Konekcija::upit($qry);
+        while($row=$result->fetch_assoc()){
+            $idbr=$row['id'];
+            $ime=$row['ime'];
+            $prezime=$row['prezime'];
+            echo '<option value="'.$idbr.'">'.$ime.' '.$prezime.'</option>';
+        }
+
+    }
+    public static function aktiviraj($idS){
+
+        $qry1="UPDATE angazovan SET aktivan=1 WHERE idsaradnik=$idS";
+        $qry2="UPDATE predaje SET aktivan=1 WHERE idsaradnik=$idS";
+        $qry3="UPDATE  korisnici SET aktivan=1 WHERE id=$idS";
+
+        $status1=Konekcija::upit($qry1);
+        $status2=Konekcija::upit($qry2);
+        $status3=Konekcija::upit($qry3);
+
+        $final=($status1||$status2||$status3);
+
+        return $final;
+
+    }
+
+    public static function dodajSrNaVezbu($idV,$idS){
+
+        $qry="INSERT INTO angazovan (idvezbe, idkorisnik, aktivan) VALUES ($idV,$idS,1)";
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
+
+    public static function mojiSaradnici($idP){
+
+        $qry='SELECT id,ime,prezime,zvanje FROM korisnici WHERE id IN(SELECT idsaradnik FROM predaje WHERE idpredmet='.$idP.')';
+        $result=Konekcija::upit($qry);
+
+        while($row=$result->fetch_assoc()){
+            $id=$row['id'];
+            $ime=$row['ime'];
+            $prezime=$row['prezime'];
+
+            echo'<option value="'.$id.'">'.$ime.' '.$prezime.'</option>';
+
+        }
+    }
+
+    public static function listaUklanjanjeS($idV){
+
+        $qry='SELECT id,ime,prezime FROM korisnici WHERE id IN (SELECT idkorisnik FROM angazovan WHERE  idvezbe='.$idV.' AND aktivan=1)';
+        $result=Konekcija::upit($qry);
+
+        while($row=$result->fetch_assoc()){
+            $id=$row['id'];
+            $ime=$row['ime'];
+            $prezime=$row['prezime'];
+            echo'<option value="'.$id.'">'.$ime.' '.$prezime.'</option>';
+        }
+
+    }
+    public static function ukloniSaVezbe($idS,$idV){
+
+        $qry="UPDATE angazovan SET aktivan=0 WHERE idvezbe=$idV AND idkorisnik=$idS";
+        $status=Konekcija::upit($qry);
+        return $status;
+    }
+
+    public static function isActivV($idS,$idV){
+        $qry="SELECT aktivan FROM angazovan WHERE idvezbe=$idV AND idkorisnik=$idS";
+        $result=Konekcija::upit($qry);
+
+
+        if($result){
+
+            $v=Konekcija::prazna($result);
+            if($v==1){
+                $row=$result->fetch_assoc();
+                $aktivan=$row['aktivan'];
+
+            }
+            else $aktivan=3;
+        }
+        return $aktivan;
+    }
+
+    public static function aktivirajV($idS,$idV){
+        $qry="UPDATE angazovan SET aktivan=1 WHERE idvezbe=$idV AND idkorisnik=$idS";
+        $status=Konekcija::upit($qry);
+        return $status;
+    }
+
+    public static function mojiPredavaci($idV){
+        $qry="SELECT id,ime,prezime,zvanje FROM korisnici WHERE id IN(SELECT idkorisnik FROM angazovan WHERE idvezbe=$idV AND aktivan=1)";
+        $error="Na vežbi nije angažovan nijedan saradnik";
+
+        $result=Konekcija::upit($qry);
+
+        $v=Konekcija::prazna($result);
+
+        if($v==0){
+            echo $error;
+        }
+        if($v==1){
+            while($row=$result->fetch_assoc()){
+                $ime=$row['ime'];
+                $prezime=$row['prezime'];
+                $zvanje=$row['zvanje'];
+                $id=$row['id'];
+
+                echo'<li class="lista"><a href="stranasaradnik.php?id='.$id.'">'.$zvanje.' '.$ime.' '.$prezime.'</a></li>';
+            }
+        }
+    }
+
 
 }

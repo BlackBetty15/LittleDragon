@@ -170,9 +170,7 @@ public static function nadjiIme(){
 
     }
 
-    public static function dodajNovuVežbu($naziv,$idpredmet,$datum,$materijal,$opis,$vreme){
 
-    }
 
     public static function obrisiPredmet($idP){
 
@@ -203,5 +201,205 @@ public static function nadjiIme(){
         $final=($status1&&$status2);
 
         return $final;
+    }
+
+    public static function mojiSaradnici($idP){
+
+        $qry="SELECT id,ime,prezime,zvanje FROM korisnici WHERE id IN(SELECT idsaradnik FROM predaje WHERE idpredmet=$idP)";
+        $error="Na predmetu nije angažovan nijedan saradnik";
+
+        $result=Konekcija::upit($qry);
+
+        $v=Konekcija::prazna($result);
+
+        if($v==0){
+            echo $error;
+        }
+        if($v==1){
+            while($row=$result->fetch_assoc()){
+                $ime=$row['ime'];
+                $prezime=$row['prezime'];
+                $zvanje=$row['zvanje'];
+                $id=$row['id'];
+
+                echo'<li class="lista"><a href="stranasaradnik.php?id='.$id.'">'.$zvanje.' '.$ime.' '.$prezime.'</a></li>';
+            }
+        }
+
+
+    }
+    public static function dodajVezbu($idP,$naziv,$opis,$vreme,$datum){
+
+        $qry='INSERT INTO vezba (naziv,idpredmet,datum,opis,vreme) VALUES ("'.$naziv.'",'.$idP.',"'.$datum.'","'.$opis.'",
+                "'.$vreme.'")';
+
+        $status=Konekcija::upit($qry);
+        return $status;
+
+
+    }
+    public static function pisiVezbuZaPredmet($idP){
+            $qry="SELECT * FROM vezba WHERE idpredmet=".$idP;
+
+            $error="Trenutno nema nijedne vežbe na ovom predmetu";
+
+            $result=Konekcija::upit($qry);
+            $v=Konekcija::prazna($result);
+            if($v==0){
+                echo $error;
+            }
+        else{
+            while($row=$result->fetch_assoc()){
+                $datum=$row['datum'];
+                $id=$row['id'];
+                $nazivV=$row['naziv'];
+
+                echo '<li class="lista"><a href="vezba.php?id='.$id.'">'.$nazivV.'('.$datum.')</a></li>';
+            }
+        }
+    }
+
+    public static function vratiImeV($idV){
+
+        $qry='SELECT naziv FROM vezba WHERE id='.$idV;
+        $result=Konekcija::upit($qry);
+
+        $row=$result->fetch_assoc();
+        return $row;
+    }
+
+    public static function ispisiVezbu($idV){
+
+        $qry='SELECT * FROM vezba WHERE id='.$idV;
+        $result=Konekcija::upit($qry);
+        $row=$result->fetch_assoc();
+        $opis=$row['opis'];
+        $datum=$row['datum'];
+        $vreme=$row['vreme'];
+
+        echo '<h4>Opis vežbe:</h4><br><p id="opisVezbe">'.$opis.'</h4><br><br>';
+        echo '<h4>Datum i vreme održavanja vežbe:</h4><p id="termin">'.$datum.' vreme:'.$vreme.'</p>';
+    }
+    public static function nadjiIdPredmeta($idV){
+
+    $qry='SELECT idpredmet FROM vezba WHERE id='.$idV;
+        $result=Konekcija::upit($qry);
+        $row=$result->fetch_assoc();
+        $id=$row['idpredmet'];
+        return $id;
+
+    }
+
+    public static function promeniImeV($idV,$naziv){
+
+        $qry='UPDATE vezba SET naziv="'.$naziv.'" WHERE id='.$idV;
+        $status=Konekcija::upit($qry);
+        return $status;
+    }
+    public static function promeniVremeV($idV,$vreme){
+        $qry='UPDATE vezba SET vreme="'.$vreme.'" WHERE id='.$idV;
+        $status=Konekcija::upit($qry);
+        return $status;
+    }
+    public static function promeniOpisV($idV,$opis){
+        $qry='UPDATE vezba SET opis="'.$opis.'" WHERE id='.$idV;
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
+    public static function promeniDatumV($idV,$datum){
+
+        $qry='UPDATE vezba SET datum="'.$datum.'" WHERE id='.$idV;
+        $status=Konekcija::upit($qry);
+        return $status;
+    }
+    public static function dodajMaterijal($idV,$url){
+
+        $qry='UPDATE vezba SET materijal="'.$url.'" WHERE id='.$idV;
+        $status=Konekcija::upit($qry);
+        return $status;
+
+    }
+
+    public static function ispisMaterijala($idV){
+
+        $qry='SELECT materijal FROM vezba WHERE id='.$idV;
+        $error="Trenutno nema materijala za vežbu";
+        $result=Konekcija::upit($qry);
+        $v=Konekcija::prazna($result);
+        if($v==0){
+
+            echo $error;
+        }
+        else if($v==1){
+            $row=$result->fetch_assoc();
+            $link=$row['materijal'];
+
+            if($link==null){
+                echo $error;
+            }
+            else
+            echo '<a href="'.$link.'">Materijal za vežbu</a>';
+        }
+
+    }
+    public static function brisiMaterijal($idV){
+        $qry='UPDATE vezba SET materijal="" WHERE id='.$idV;
+        $status=Konekcija::upit($qry);
+        return $status;
+    }
+
+    public static function vratiZaVežbu($min,$max){
+
+
+        $qry='SELECT * FROM vezba WHERE datum BETWEEN "'.$min.'" AND "'.$max.'"';
+        $result=Konekcija::upit($qry);
+
+        while($row=$result->fetch_assoc()){
+
+            $idV=$row['id'];
+            $naziv=$row['naziv'];
+            $idP=$row['idpredmet'];
+            $time=$row['vreme'];
+            $date=$row['datum'];
+            $lab=self::lab($idP);
+            $name=self::imeP($idP);
+
+
+            echo '<h3>Predmet:</h3><br><a href="stranapredmeta.php?id='.$idP.'">'.$name.'</a><br>
+            <p>Datum i vreme:'.$date.' '.$time.'</p><br><p>Laboratorija: '.$lab.'</p><br><a href="vezba.php?id='.$idV.'">
+            '.$naziv.'</a><br>'
+            ;
+
+
+
+        }
+
+    }
+    public static function lab($idP){
+
+        $qry='SELECT lab FROM predmeti WHERE id='.$idP;
+        $result=Konekcija::upit($qry);
+        $row=$result->fetch_assoc();
+        $lab=$row['lab'];
+
+        return $lab;
+    }
+    public static function imeP($idP){
+        $qry='SELECT naziv FROM predmeti WHERE id='.$idP;
+        $result=Konekcija::upit($qry);
+        $row=$result->fetch_assoc();
+        $name=$row['naziv'];
+
+        return $name;
+    }
+
+    public static function imeS($idV){
+
+        $qry='SELECT ime,prezime,zvanje,id FROM korisnici WHERE id=(SELECT idkorisnik FROM angazovan WHERE idvezbe='.$idV.')';
+        $result=Konekcija::upit($qry);
+        $row=$result->fetch_assoc();
+
+        return '<a href="stranasaradnik.php?id='.$row['id'].'">'.$row['zvanje'].' '.$row['ime'].' '.$row['prezime'].'</a>';
     }
 }

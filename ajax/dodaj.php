@@ -1,22 +1,42 @@
 <?php
+
+require_once '../Saradnik.php';
+require_once '../Predmet.php';
+
 session_start();
 
-$idS=$_SESSION['korisnikPromena'];
 
-$privNaziv = $_FILES['file']['tmp_name'];
-$naziv = $_FILES['file']['name'];
+if(isset($_GET['idZahtev'])&&($_GET['idZahtev']==1)){
 
 
-//slika
-if(isset($_GET['idZahtev']) && $_GET['idZahtev']==1)
-{
-    move_uploaded_file($privNaziv, '../uploads/images/' . $naziv);
-    echo "Uspesno ste promenili sliku!";
+    $nedelja=intval($_POST['dan']);
+
+
+    if($nedelja==1){
+
+        $min="2016/09/01";
+        $max="2016/09/08";
+    }
+    else if($nedelja==2){
+        $min="2016/09/09";
+        $max="2016/09/16";
+
+    }
+    else{
+        $min="2016/09/17";
+        $max="2016/09/30";
+    }
+
+    $novimin=date('Y/m/d',strtotime($min));
+    $novimax=date('Y/m/d',strtotime($max));
+
+    $vezbe=Predmet::vratiZaVežbu($novimin,$novimax);
+
+    echo $vezbe;
+
+
+
 }
 
-//fajlovi
-if(isset($_GET['idZahtev']) && $_GET['idZahtev']==2)
-{
-    move_uploaded_file($privNaziv, '../uploads/files/' . $naziv);
-}
+
 ?>

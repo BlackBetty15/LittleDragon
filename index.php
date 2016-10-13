@@ -20,8 +20,18 @@ echo "<div class=\"col-6\">";
 
 echo "<h3>".$page_title."</h3>";
 
-/*ide kod*/
+echo '<select id="raspored">
+    <option value="1">Prva nedelja</option>
+    <option value="2">Druga nedelja</option>
+    <option value="3">Treća nedelja</option>
+      </select>';
 
+echo '<div id="rasporedStampa">';
+
+
+
+
+echo '</div>';
 
 
 echo "</div>";

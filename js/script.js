@@ -184,6 +184,7 @@ $("body").on("click","#ukloni",function(){
 
         });
 
+
 });
         //Brisanje predmeta//
 $("body").on("click","#deletetoggle",function(){
@@ -203,29 +204,412 @@ $("body").on("click","#obrisi",function(){
         "ajax/obrada.php?idZahtev=9",
         function(odgovor,status){
             alert(odgovor + " "+ status);
-            window.location.href='index.php';
+            window.location.href='predmeti.php';
         }
     );
     return false;
 });
+        //Brisanje saradnika//
+$("body").on("click","#obrisiSaradnika",function(){
 
-$("body").on("click","#dodajS",function(){
 
-    function _(el)
-    {
-        return document.getElementById(el);
+    $('#brisanjeS').toggle(1000);
+
+
+});
+
+$("body").on("click","#neBrisiS",function(){
+    $('#brisanjeS').css('display','none');
+
+});
+$("body").on("click","#obrisiS",function(){
+
+    $.get(
+        "ajax/obrada.php?idZahtev=10",
+        function(odgovor,status){
+            alert(odgovor + " "+ status);
+            window.location.href='saradnici.php';
+        }
+    );
+    return false;
+
+});
+
+//Deaktivacija korisnika//
+$("body").on("click","#deaktivirajS",function(){
+    $("#deaktivS").toggle(1000);
+});
+$("body").on("click","#noDeactiv", function (){
+
+    $("#deaktivS").css('display','none');
+
+});
+$("body").on("click","#deaktiviraj",function(){
+
+    $.get(
+        "ajax/obrada.php?idZahtev=11",
+        function(odgovor,status){
+            alert(odgovor+status);
+            window.location.href='saradnici.php';
+        }
+    );
+});
+//Aktivacija korisnika//
+$("body").on("click","#aktiviraj",function(){
+
+    idS=$("#neaktivni").val();
+    alert(idS);
+    if(idS!=null){
+    $.post(
+        "ajax/obrada.php?idZahtev=12",
+        {id:idS},
+        function(odgovor,status){
+            alert(odgovor+status);
+            if(odgovor==1){
+                $("#neaktivniS").load(document.URL + " #neaktivniS");
+                $("#listaS").load(document.URL + " #listaS");
+            }
+        else
+                alert("Došlo je do neke greške, pokuštajte kasnije");
+        }
+    );
+    }
+    else
+        alert("Ne možete to sad uraditi");
+
+});
+
+            //Dodavanje vežbe//
+$("body").on("click","#vezbaBrisi",function(){
+
+    glavna=$("#mainError");
+    obav=$(".obavezno");
+
+    glavna.html('');
+    obav.css('border','1px solid #A9A9A9');
+
+});
+
+$("body").on("click","#dodajVežbu",function(){
+
+    naziv=$('#vezbaIme').val();
+    opis=$('#opisV').val();
+    datum=$('#datum').val();
+    vreme=$('#vremeV').val();
+
+    //greske//
+
+    glavna=$("#mainError");
+    obav=$(".obavezno");
+    if(naziv==""||datum==""||vreme==""){
+
+        glavna.css('color','red');
+        glavna.html('Morate popuniti sva polja označena *');
+        obav.css('border','1px solid red');
     }
 
+    else{
 
-        var fileN = _("file").files[0];
-        // alert(file.name+" | "+file.size+" | "+file.type);
-        var formdata = new FormData();
-        formdata.append("file", fileN);
-        var ajax = new XMLHttpRequest();
+        $.post(
+            "ajax/obrada.php?idZahtev=13",
+            {ime:naziv,opisV:opis,date:datum,time:vreme},
+            function(odgovor,status){
 
-        ajax.open("POST", "ajax/dodaj.php?idZahtev=1");
-         ajax.send(formdata);
+                alert(odgovor+status);
 
-        alert(ajax.responseText);
+                if(odgovor==1){
+                    alert("Uspeštno ste dodali vežbu");
+
+                    $("#listaVezbi").load(document.URL + ' #listaVezbi');
+                    naziv.val('');
+                    opis.val('');
+                    datum.val();
+                    vreme.val();
+
+                }
+                else{
+                    alert("Došlo je do neke greške, molimo pokušajte kasnije");
+                }
+            }
+
+
+        );
+    }
+
+});
+
+$("body").on("click","#obrisiVezbu",function(){
+
+    $("#brisanjeV").toggle(1000);
+});
+$("body").on("click","#neBrisiV",function(){
+
+    $("#brisanjeV").css('display','none');
+
+});
+
+$("body").on("click","#obrisiV",function(){
+
+
+    /*Ajaks za brisanje vežbe*/
+    $.get(
+        "ajax/obrada.php?idZahtev=14",
+        function(odgovor,status){
+            alert(odgovor + " "+ status);
+            window.location.href='predmeti.php';
+        }
+    );
+    return false;
+
+});
+
+//Dodavanje i brisanje sa
+// radnika sa vežbe
+
+//Brisanje//
+$("body").on("click","#ukloniSaV",function(){
+
+    idS=$("#ukloniSar").val();
+        alert(idS);
+
+    $.post(
+
+        "ajax/obrada.php?idZahtev=15",
+        {id:idS},
+        function(odgovor,status){
+            alert(odgovor+status);
+
+            if(odgovor==1){
+
+                $("#osvezi").load(document.URL + ' #osvezi');
+                alert('Uspešno ste uklonili saradnika');
+                $("#saradniciVezbe").load(document.URL+ ' #saradniciVezbe');
+            }
+            else
+                alert('Došlo je do neke greške, molimo pokušajte kasnije');
+
+        }
+
+    );
+
+});
+//Dodavanja saradnika//
+$("body").on("click","#dodajNaVezbu",function(){
+
+    poruka=$("#porukaDodajV");
+    saradnik=$("#imeSr").val();
+    alert(saradnik);
+    postoji="Saradnik je već na vežbi";
+    dodat="Saradnik je uspešno dodat na vežbu";
+    aktiviran="Saradnik je ponovo aktivan na vežbi";
+    unknown="Došlo je do neke greške, pokušajte kasnije";
+
+    $.post(
+
+        "ajax/obrada.php?idZahtev=16",
+        {id:saradnik},
+        function(odgovor,status){
+
+            alert(status+odgovor);
+            if(odgovor==0){
+                poruka.css('color','red');
+                poruka.html(postoji);
+            }
+            else if(odgovor==2){
+                poruka.css('color','green');
+                poruka.html(aktiviran);
+                $("#saradniciVezbe").load(document.URL + ' #saradniciVezbe');
+                $("#osvezi").load(document.URL + ' #osvezi');
+            }
+            else if(odgovor==3){
+                poruka.css('color','red');
+                poruka.html(unknown);
+            }
+            else if(odgovor==1){
+                poruka.css('color','green');
+                poruka.html(dodat);
+                $("#saradniciVezbe").load(document.URL + ' #saradniciVezbe');
+                $("#osvezi").load(document.URL + ' #osvezi');
+            }
+
+
+        }
+    );
+
+});
+
+//Izmena vežbe//
+$("body").on("click","#izmeniMe",function(){
+
+    $("#izmeniMeAk").toggle(2000);
+
+});
+
+//Izmena opisa//
+$("body").on("click","#izmeniOpV",function(){
+
+    opisN=$("#opisVN").val();
+
+    $.post(
+        "ajax/obrada.php?idZahtev=17",
+        {novi:opisN},
+        function(odgovor,status){
+
+            if(odgovor==1){
+                alert('Uspešno ste promenili opis vežbe');
+                $("#opisVezbe").load(document.URL + ' #opisVezbe');
+
+            }
+            else
+                alert('Došlo je do neke greške, molimo pokušajte kasnije');
+        }
+    );
+
+});
+$("body").on("click","#izmeniNaz",function(){
+
+    nazivN=$("#noviNaziv").val();
+    polje=$("#greskaNaziv");
+
+    error="Ne možete ostaviti prazno polje za naziv!";
+
+    if(nazivN==""){
+        polje.css('color','red');
+        polje.html(error);
+    }
+    else{
+
+        $.post(
+
+            "ajax/obrada.php?idZahtev=18",
+            {novi:nazivN},
+            function(odgovor,status){
+                alert(odgovor+status);
+                if(odgovor==1){
+
+                    polje.html('');
+                    $("#vezbica").load(document.URL + ' #vezbica');
+                    alert('Uspešno ste promenili naziv vežbe');
+
+                }
+                else
+                    alert('Došlo je do neke greške, molimo pokušajte kasnije');
+            }
+
+        );
+
+    }
+});
+$("body").on("click","#izmeniDat",function(){
+
+    datum=$("#noviDatum").val();
+    polje=$("#greskaDate");
+    error="Ne smete ostaviti prazno polje!";
+
+    if(datum==""){
+        polje.css('color','red');
+        polje.html(error);
+    }
+    else{
+
+        $.post(
+            "ajax/obrada.php?idZahtev=19",
+            {novi:datum},
+            function(odgovor,status){
+                alert(odgovor+status);
+                if(odgovor==1){
+                    alert('Uspešno ste promenili datum');
+                    polje.html('');
+                    $("#termin").load(document.URL + ' #termin');
+                }
+                else
+                    alert('Došlo je do neke greške, molimo pokušajte kasnije');
+            }
+        );
+    }
+
+});
+$("body").on("click","#izmeniVr", function(){
+
+    vreme=$("#novoVreme").val();
+    polje=$("#greskaTime");
+    error="Ne smete ostaviti prazno polje!";
+
+    if(vreme==""){
+        polje.css('color','red');
+        polje.html(error);
+    }
+
+    else{
+
+        $.post(
+            "ajax/obrada.php?idZahtev=20",
+            {novi:vreme},
+            function(odgovor,status){
+                alert(odgovor+status);
+
+            if(odgovor==1){
+                alert('Uspešno ste izmenili vreme održavanja vežbi');
+                polje.html('');
+                $("#termin").load(document.URL + ' #termin');
+            }
+                else
+                alert('Došlo je do neke greške, molimo pokušajte kasnije');
+
+            }
+
+
+        );
+    }
+});
+
+$("body").on("click","#uklonimat",function(){
+
+    $("#brisanjeM").toggle(1000);
+
+});
+$("body").on("click","#neBrisiM", function () {
+
+
+    $("#brisanjeM").css('display','none');
+
+});
+$("body").on("click","#obrisiM",function(){
+
+
+    $.get(
+        "ajax/obrada.php?idZahtev=21",
+        function(odgovor,status){
+            alert(odgovor + " "+ status);
+            if(odgovor==1){
+                $("#materijal").load(document.URL + ' #materijal');
+                $("#brisanjeM").css('display','none');
+            }
+            else
+            {
+                alert('Došlo je do neke greške, pokušajte kasnije');
+            }
+        }
+    );
+    return false;
+
+
+});
+
+$("body").on("change","#raspored",function(){
+
+    nedelja=$("#raspored").val();
+
+    $.post(
+        "ajax/dodaj.php?idZahtev=1",
+        {dan:nedelja},
+        function(odgovor,status){
+
+            $("#rasporedStampa").html(odgovor);
+        }
+
+
+    );
+
 
 });

@@ -21,41 +21,31 @@
             </tr>
             <tr>
                 <td>
-                    <label for="datum">Datum vežbe *</label>
+                    <label for="datum">Datum vežbe  *</label>
                 </td>
                 <td>
-                    <input type="date" id="datum"  class="obavezno" >
+                    <input type="text" id="datum" placeholder="gggg/mm/dd"  class="obavezno" >
                     <p id="porukaDatum" class="poruka"></p>
                 </td>
 
 
 
             </tr>
-
             <tr>
                 <td>
-                    <label for="vreme">Vreme održavanja vežbe *</label>
+                    <label for="vreme">Vreme održavanja*</label>
+
                 </td>
                 <td>
-                    <input type="time" id="vreme"  class="obavezno" >
+                    <input type="text" id="vremeV" placeholder="hh:mm:ss" class="obavezno">
                     <p id="porukaVreme" class="poruka"></p>
                 </td>
-
-
-
             </tr>
 
             <tr>
-                <td>
-                    <label for="fajlovi">Materijal</label>
+                <td colspan="2">
+                    <p id="mainError"></p>
                 </td>
-                <td>
-                    <input type="file" id="fajlovi"  >
-                    <p id="porukaDatum" class="poruka"></p>
-                </td>
-
-
-
             </tr>
 
             <tr>
@@ -67,6 +57,7 @@
 
                     <input id="dodajVežbu" type="button" value="Dodaj vežbu">
                 </td>
+
             </tr>
         </table>
 

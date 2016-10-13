@@ -69,7 +69,10 @@ if(isset($_SESSION['tip'])&&($_SESSION['tip']==1)){
             </form>
     ';
 
-
+    echo '<input type="button" id="obrisiSaradnika" value="Obriši korisnika">';
+    include_once 'templates/frmsaradnikdel.php';
+    echo '<input type="button" id="deaktivirajS" value="Deaktiviraj korisnika">';
+    include_once 'templates/frmdeaktiviraj.php';
 }
 echo '<hr>';
 
@@ -85,6 +88,7 @@ if(isset($_SESSION['tip'])&&($_SESSION['tip']==1||$_SESSION['idKorisnik']==$_GET
         include_once 'templates/frmizmene.php';
     echo '<br><br>';
         include_once 'templates/frmslika.php';
+    echo '<p>Dozvoljeni formati su: jpg,png i gif</p>';
 }
 
 echo '</div>';

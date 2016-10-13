@@ -6,6 +6,7 @@ session_start();
 include_once 'Predmet.php';
 include_once 'Saradnik.php';
 $_SESSION['predmetPromena']=$_GET['id'];
+$idP=$_GET['id'];
 $page_title=Predmet::nadjiIme();
 include_once 'valicacija.php';
 include_once 'templates/header.php';
@@ -14,6 +15,12 @@ echo "<div class=\"col-6\">";
 
 echo '<div id="stranaP">';
 Predmet::pisiPredmet();
+echo '</div><hr>';
+echo '<div id="saradniciNaPr">';
+echo '<h3 style="font-size:20px;font-weight: bold;">Saradnici angažovani na predmetu su:</h3><br>';
+echo        '<ul>
+    '.Predmet::mojiSaradnici($idP).'
+            </ul>';
 echo '</div><hr>';
 
 $idP=$_GET['id'];
@@ -35,11 +42,18 @@ if(isset($_SESSION['tip'])){
 }
 echo '<h3>Vežbe:</h3><br>';
 if(isset($_SESSION['tip'])){
-    if($_SESSION['tip']!=0||(Saradnik::mojPredmet($idP,$idS))==1){
+    $mp=Saradnik::mojPredmet($idP,$idS);
+    if($_SESSION['tip']==1||($mp==1)){
 
     include_once 'templates/frmvezba.php';
+        echo'<br><br><br>';
     }
 }
+
+echo '<div id="listaV">
+        <ul id="listaVezbi">';
+Predmet::pisiVezbuZaPredmet($idP);
+        echo'</ul></div>';
 
 
 echo "</div>";
